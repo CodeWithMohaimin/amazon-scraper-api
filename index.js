@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const request = require("request-promise");
 
 const app = express();
@@ -9,6 +10,11 @@ const generateScraperUrl = () =>
   `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
 
 app.use(express.json());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Welcome to amazon Scraper API");
