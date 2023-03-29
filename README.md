@@ -23,9 +23,10 @@ To run the API, you will need the following:
 ### If you wanted to Get the Product Details use this parameter.
 
 - product_id: The unique identifier of the product.
+Example product ID = B0B3C5HNXJ
 
 ```bash
-GET /product/<product_id>
+GET /products/<product_id>
 
 
 ```
@@ -33,9 +34,10 @@ GET /product/<product_id>
 ### If you wanted to Get the Product Reviews use this parameter.
 
 - product_id: The unique identifier of the product.
+Example product ID = B0B3C5HNXJ
 
 ```bash
-GET /reviews/<product_id>
+GET /products/:productId/reviews
 
 
 ```
@@ -45,7 +47,7 @@ GET /reviews/<product_id>
 - product_id: The unique identifier of the product.
 
 ```bash
-GET /offers/<product_id>
+GET /products/:productId/offers
 
 
 ```
